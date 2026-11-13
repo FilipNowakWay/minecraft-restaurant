@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* Comma-separated: first image sits ON TOP of the second */
+    background-image:
+        url("../assets/Grass_Block.png"), url("../assets/Dirt.png");
+
+    background-repeat: repeat-x, repeat;
+    background-position:
+        top left,
+        top left;
+    background-size:
+        64px 64px,
+        64px 64px;
+    image-rendering: pixelated;
+}
+
+/* Nav */
+
+header {
+    padding: 1.5rem 1rem 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 50px 0;
+}
+
+nav button {
+    padding: 0.65rem 1.5rem;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #1e1e1e;
+    background-color: #707070;
+    border: 3px solid #1e1e1e;
+    box-shadow:
+        inset 3px 3px 0 #a8a8a8,
+        inset -3px -3px 0 #3d3d3d;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #7e8f58;
+    color: #ffffa0;
+    box-shadow:
+        inset 3px 3px 0 #b5c78b,
+        inset -3px -3px 0 #46522e;
+}
+
+nav button:active {
+    box-shadow:
+        inset 3px 3px 0 #3d3d3d,
+        inset -3px -3px 0 #a8a8a8;
+}
+
+/* Content */
+
+#content > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+
