@@ -1,5 +1,7 @@
 # minecraft-restaurant
 
+[The Crafting Table - Minecraft Restaurant](https://filipnowakway.github.io/minecraft-restaurant/)
+
 A small Minecraft-themed restaurant site for **The Crafting Table**, the Overworld's finest tavern. Browse the menu, check the tavern's coordinates, and see when the kitchen is open — all in a pixel-art style built with vanilla JavaScript and bundled with Webpack.
 
 ![Screenshot of the site](Site.png)
