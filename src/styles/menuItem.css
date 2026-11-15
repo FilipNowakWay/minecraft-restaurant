@@ -1,11 +1,12 @@
 .itemCard {
     width: 100%;
     max-width: 700px;
-    padding: 1.25rem 1.75rem;
+    padding: clamp(1rem, 4vw, 1.25rem) clamp(1.25rem, 4.5vw, 1.75rem);
     background-color: rgba(24, 24, 24, 0.88);
     color: #f0f0f0;
     font-family: monospace;
     line-height: 1.5;
+    overflow-wrap: break-word;
     border: 4px solid #1e1e1e;
     box-shadow:
         inset 3px 3px 0 #7a7a7a,
@@ -13,14 +14,14 @@
 
     /* Places title on left, price on right, description below */
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.75rem 1rem;
 }
 
 .itemCard h1 {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: clamp(1.1rem, 4.5vw, 1.35rem);
     color: #ffaa00;
     text-shadow: 2px 2px 0 #000000;
 }
@@ -36,7 +37,7 @@
 
 .itemPrice h2 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     color: #55ff55; /* Classic Minecraft XP / Emerald green */
     text-shadow: 2px 2px 0 #000000;
 }
@@ -59,4 +60,15 @@
 .itemText p:last-child {
     color: #c06cff;
     font-style: italic;
+}
+
+/* Very narrow phones: stack the price under the title */
+@media (max-width: 420px) {
+    .itemCard {
+        grid-template-columns: 1fr;
+    }
+
+    .itemPrice {
+        justify-self: start;
+    }
 }
