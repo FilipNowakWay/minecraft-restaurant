@@ -1,4 +1,4 @@
-import tawern from "../assets/Tawern.jpeg";
+import tavern from "../assets/Tawern.jpeg";
 import "../styles/coordinates.css";
 
 export default function loadContact() {
@@ -14,7 +14,8 @@ export default function loadContact() {
   heroCard.classList.add("heroCard");
 
   const heroImg = document.createElement("img");
-  heroImg.src = tawern;
+  heroImg.src = tavern;
+  heroImg.alt = "Tavern image"
   heroImg.classList.add("heroImg");
 
   const heroH2 = document.createElement("h2");

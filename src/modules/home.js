@@ -13,7 +13,7 @@ export default function loadHome() {
 
   const heroSection = document.createElement("div");
   heroSection.append(heroHeader, welcome);
-  heroSection.classList.add("heroSecton");
+  heroSection.classList.add("heroSection");
 
   // Hours Card
   const hoursCard = document.createElement("div");

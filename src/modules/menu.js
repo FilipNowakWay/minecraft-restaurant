@@ -43,21 +43,17 @@ const menuItems = [
   },
 ];
 
-const menu = document.createElement("div");
-let generated = false;
-
 export default function loadMenu() {
-  let item;
-  if (generated) return menu;
+  const menu = document.createElement("div");
+  let menuItem;
   menuItems.forEach((item) => {
-    item = createMenuItem(
+    menuItem = createMenuItem(
       item.name,
       item.price,
       item.description,
       item.statusEffect,
     );
-    menu.append(item);
+    menu.append(menuItem);
   });
-  generated = true;
   return menu;
 }

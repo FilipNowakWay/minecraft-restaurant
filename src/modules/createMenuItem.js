@@ -12,6 +12,7 @@ export default function createMenuItem(name, price, text, statusEffect) {
   itemPriceText.textContent = price;
   const itemPriceImg = document.createElement("img");
   itemPriceImg.src = emerald;
+  itemPriceImg.alt = `${price} emeralds`;
   itemPriceImg.classList.add("emeraldImg");
   itemPriceDiv.append(itemPriceText, itemPriceImg);
 
